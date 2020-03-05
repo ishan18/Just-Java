@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/coffee"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:paddingLeft="18dp"
+            android:text="Wanna Order Coffee?"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="305dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="18dp"
+            android:background="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="Enter your Name"
+            android:inputType="textPersonName"
+            android:textColorHighlight="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:text="quantity"
+            style="@style/HeaderTextStyle"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/minus"
+                android:onClick="decrease" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="42dp"
+                android:layout_height="40dp"
+                android:paddingLeft="16dp"
+                android:text="0"
+                android:textColor="#3E2723"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/plus"
+                android:onClick="increase" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:fontFamily="casual"
+            android:shadowColor="#00553939"
+            android:text="Extra Sugar"
+            android:textColor="#EEEEEE"
+            android:textColorHighlight="#00941717"
+            android:textColorLink="#000E0D0D"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="casual"
+            android:text="Extra Milk"
+            android:textColor="#EEEEEE"
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="181dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/order"
+            android:fontFamily="monospace"
+            android:onClick="orderSummary"
+            android:text="@string/order_summary"
+            android:textColor="#EEEEEE"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:text="Order Summary"
+            style="@style/HeaderTextStyle"/>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="155dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#EEEEEE" />
+
+        <TextView
+            android:id="@+id/price_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:paddingLeft="16dp"
+            android:text="Total: $0"
+            android:textColor="#EEEEEE"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="197dp"
+                android:layout_height="41dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/order"
+                android:fontFamily="cursive"
+                android:onClick="order"
+                android:text="Order Now!"
+                android:textColor="#EEEEEE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
